@@ -10,11 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var swipeUpLabel: UILabel!
+    @IBOutlet weak var firstButtonView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func didTapFirstButton() {
+         firstButtonView.isHidden = false
+    }
+    
+    @IBAction func didTapSecondButton() {
+        firstButtonView.isHidden = true
+    }
+    
+    @IBAction func didTapThirdButton() {
+        firstButtonView.isHidden = false
+    }
 }
 

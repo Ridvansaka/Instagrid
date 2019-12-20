@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -8,38 +8,113 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Delm-Medium.otf">
+            <string>Delm-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etS-1y-Bo1">
+                                <rect key="frame" x="125" y="216.33333333333334" width="125" height="22.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="AoJ-HL-uAR">
+                                <rect key="frame" x="177.66666666666666" y="186.33333333333334" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AoJ-HL-uAR" secondAttribute="height" multiplier="1:1" id="joN-QZ-cKn"/>
+                                    <constraint firstAttribute="width" constant="20" id="vif-LX-jQr"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="AVJ-fz-B1a">
+                                <rect key="frame" x="137.66666666666666" y="49" width="100" height="27.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AVJ-fz-B1a" secondAttribute="height" multiplier="40:11" id="Qao-vQ-1Ua"/>
+                                    <constraint firstAttribute="width" constant="100" id="Yri-lG-Ee5"/>
+                                </constraints>
+                            </imageView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEJ-rg-UtH">
+                                <rect key="frame" x="25" y="268.66666666666669" width="325" height="325.00000000000006"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jty-G3-0wE" userLabel="B">
+                                        <rect key="frame" x="0.0" y="162.66666666666663" width="162.66666666666666" height="162.33333333333337"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Jty-G3-0wE" secondAttribute="height" multiplier="1:1" id="e5y-rk-3g4"/>
+                                        </constraints>
+                                        <state key="normal" title="Button B"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCr-zn-baI" userLabel="C">
+                                        <rect key="frame" x="162.66666666666663" y="162.66666666666663" width="162.33333333333337" height="162.33333333333337"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vCr-zn-baI" secondAttribute="height" multiplier="1:1" id="6rx-Mh-Hdx"/>
+                                        </constraints>
+                                        <state key="normal" title="Button C"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU4-fy-Rhr" userLabel="A">
+                                        <rect key="frame" x="-8" y="0.0" width="325" height="162.66666666666666"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fU4-fy-Rhr" secondAttribute="height" multiplier="2:1" id="WJb-EW-kTA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button A"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="vCr-zn-baI" firstAttribute="leading" secondItem="Jty-G3-0wE" secondAttribute="trailing" id="3OA-i7-dtI"/>
+                                    <constraint firstItem="Jty-G3-0wE" firstAttribute="height" secondItem="fU4-fy-Rhr" secondAttribute="height" id="G6V-sf-BYU"/>
+                                    <constraint firstAttribute="width" secondItem="eEJ-rg-UtH" secondAttribute="height" multiplier="1:1" id="IaI-eO-Who"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jty-G3-0wE" secondAttribute="bottom" id="Lc2-3b-Dv4"/>
+                                    <constraint firstItem="Jty-G3-0wE" firstAttribute="leading" secondItem="eEJ-rg-UtH" secondAttribute="leading" id="PgD-ty-mVa"/>
+                                    <constraint firstItem="fU4-fy-Rhr" firstAttribute="leading" secondItem="eEJ-rg-UtH" secondAttribute="leading" id="V6l-cl-Adg"/>
+                                    <constraint firstItem="vCr-zn-baI" firstAttribute="height" secondItem="fU4-fy-Rhr" secondAttribute="height" id="Zq6-PV-nlW"/>
+                                    <constraint firstAttribute="trailing" secondItem="vCr-zn-baI" secondAttribute="trailing" id="cuI-91-9Y8"/>
+                                    <constraint firstAttribute="trailing" secondItem="fU4-fy-Rhr" secondAttribute="trailing" id="ecs-OA-ctY"/>
+                                    <constraint firstItem="vCr-zn-baI" firstAttribute="bottom" secondItem="Jty-G3-0wE" secondAttribute="bottom" id="rt6-Ym-ZgV"/>
+                                    <constraint firstItem="fU4-fy-Rhr" firstAttribute="top" secondItem="eEJ-rg-UtH" secondAttribute="top" id="rzb-jw-Yli"/>
+                                    <constraint firstAttribute="bottom" secondItem="vCr-zn-baI" secondAttribute="bottom" id="xLl-x7-arQ"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="PkK-qw-8Wq">
-                                <rect key="frame" x="31" y="736.5" width="352" height="105.5"/>
+                                <rect key="frame" x="28" y="663.66666666666663" width="319" height="94.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APh-mV-Mmu">
-                                        <rect key="frame" x="0.0" y="0.0" width="105.5" height="105.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="94.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="APh-mV-Mmu" secondAttribute="height" multiplier="1:1" id="xmM-fr-T20"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="Layout 1"/>
+                                        <connections>
+                                            <action selector="didTapFirstButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="LwP-4L-ZtE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sps-Rb-qW7">
-                                        <rect key="frame" x="123.5" y="0.0" width="105" height="105.5"/>
+                                        <rect key="frame" x="112.33333333333334" y="0.0" width="94.333333333333343" height="94.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Sps-Rb-qW7" secondAttribute="height" multiplier="1:1" id="9bW-qg-fKq"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="Layout 2"/>
+                                        <connections>
+                                            <action selector="didTapSecondButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="7oo-6f-w7r"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBx-uR-3Vw">
-                                        <rect key="frame" x="246.5" y="0.0" width="105.5" height="105.5"/>
+                                        <rect key="frame" x="224.66666666666666" y="0.0" width="94.333333333333343" height="94.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="RBx-uR-3Vw" secondAttribute="height" multiplier="1:1" id="zUN-Lo-lYJ"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="Layout 3"/>
+                                        <connections>
+                                            <action selector="didTapThirdButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="R0T-af-WRQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -47,21 +122,37 @@
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="PkK-qw-8Wq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4NE-Jb-Col"/>
+                            <constraint firstItem="PkK-qw-8Wq" firstAttribute="top" secondItem="eEJ-rg-UtH" secondAttribute="bottom" constant="70" id="84l-oH-6Lg"/>
+                            <constraint firstItem="AoJ-HL-uAR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DCp-gy-P4g"/>
+                            <constraint firstItem="eEJ-rg-UtH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Esu-Cd-g9M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eEJ-rg-UtH" secondAttribute="trailing" constant="25" id="Smp-6y-bHf"/>
                             <constraint firstItem="PkK-qw-8Wq" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.85" id="X2h-QO-7Jd"/>
+                            <constraint firstItem="etS-1y-Bo1" firstAttribute="top" secondItem="AoJ-HL-uAR" secondAttribute="bottom" constant="10" id="Yk0-BR-zph"/>
+                            <constraint firstItem="AVJ-fz-B1a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dv5-hv-uLO"/>
+                            <constraint firstItem="etS-1y-Bo1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gf9-P8-ScK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PkK-qw-8Wq" secondAttribute="bottom" constant="20" id="h9R-i3-29J"/>
+                            <constraint firstItem="eEJ-rg-UtH" firstAttribute="top" secondItem="etS-1y-Bo1" secondAttribute="bottom" constant="30" id="iR9-dX-ZwT"/>
+                            <constraint firstItem="eEJ-rg-UtH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="lKG-ax-kp6"/>
+                            <constraint firstItem="AVJ-fz-B1a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="xEQ-2z-ebV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstButtonView" destination="eEJ-rg-UtH" id="9Zx-Pd-rPU"/>
+                        <outlet property="swipeUpLabel" destination="etS-1y-Bo1" id="5gN-y3-KAS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="110"/>
+            <point key="canvasLocation" x="133.125" y="107.74647887323944"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Layout 1" width="27" height="27"/>
-        <image name="Layout 2" width="27" height="27"/>
-        <image name="Layout 3" width="27" height="27"/>
+        <image name="Arrow Up" width="4.6666665077209473" height="3.3333332538604736"/>
+        <image name="Instagrid" width="41.333332061767578" height="13"/>
+        <image name="Layout 1" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Layout 2" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Layout 3" width="26.666666030883789" height="26.666666030883789"/>
         <namedColor name="backgroundColor">
             <color red="0.71764705882352942" green="0.84313725490196079" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
