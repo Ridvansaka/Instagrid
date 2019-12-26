@@ -42,7 +42,7 @@
                                     <constraint firstAttribute="width" constant="100" id="Yri-lG-Ee5"/>
                                 </constraints>
                             </imageView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEJ-rg-UtH">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEJ-rg-UtH" userLabel="Grid View">
                                 <rect key="frame" x="25" y="268.66666666666669" width="325" height="325.00000000000006"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Leo-WV-paW">
@@ -57,7 +57,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Leo-WV-paW" secondAttribute="bottom" constant="10" id="3Go-qs-5r0"/>
                                     <constraint firstAttribute="width" secondItem="eEJ-rg-UtH" secondAttribute="height" multiplier="1:1" id="IaI-eO-Who"/>
@@ -122,7 +122,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomStackView" destination="xes-7b-hgx" id="07Q-OF-VgL"/>
-                        <outlet property="firstButtonView" destination="eEJ-rg-UtH" id="9Zx-Pd-rPU"/>
+                        <outlet property="gridView" destination="eEJ-rg-UtH" id="BOD-4s-Dmn"/>
                         <outlet property="swipeUpLabel" destination="etS-1y-Bo1" id="5gN-y3-KAS"/>
                         <outlet property="topStackView" destination="U1x-wc-R9L" id="NLb-vN-pmI"/>
                     </connections>
