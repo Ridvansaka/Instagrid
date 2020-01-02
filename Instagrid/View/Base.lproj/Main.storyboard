@@ -103,6 +103,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="PkK-qw-8Wq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4NE-Jb-Col"/>
                             <constraint firstItem="PkK-qw-8Wq" firstAttribute="top" secondItem="eEJ-rg-UtH" secondAttribute="bottom" constant="70" id="84l-oH-6Lg"/>
@@ -119,6 +120,9 @@
                             <constraint firstItem="AVJ-fz-B1a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="xEQ-2z-ebV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="a1b-OD-O29" appends="YES" id="WgB-Jp-v2J"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="bottomStackView" destination="xes-7b-hgx" id="07Q-OF-VgL"/>
@@ -128,6 +132,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="a1b-OD-O29">
+                    <connections>
+                        <action selector="didSwipeOnMainView:" destination="BYZ-38-t0r" id="CAf-Hn-yYE"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="132" y="107.14285714285715"/>
         </scene>

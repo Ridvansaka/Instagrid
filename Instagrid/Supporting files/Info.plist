@@ -41,6 +41,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need photo library access to load images into layout</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Need photo library access to save image layout</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>ThirstySoftRegular.otf</string>
