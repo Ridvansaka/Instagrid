@@ -14,12 +14,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var gridView: UIView!
     @IBOutlet weak var topStackView: UIStackView!
     @IBOutlet weak var bottomStackView: UIStackView!
-    
-    var selectedImageButton: UIButton?
+    @IBOutlet weak var shareArrowImageView: UIImageView!
+    @IBOutlet var layoutButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        resetLayoutButtonsSelectedImage()
+    }
+    
+    var selectedImageButton: UIButton?
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+            modifyArrowOrientationForLandscape()
+        } else {
+            shareArrowImageView.transform = .identity
+        }
+    }
+    
+    private func modifyArrowOrientationForLandscape() {
+        shareArrowImageView.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
     }
     
     private func createViewsAccordingTo(layout: Layout) {
@@ -33,6 +47,7 @@ class ViewController: UIViewController {
             let button = UIButton()
             button.backgroundColor = .white
             button.setImage(UIImage(named: "Plus"), for: .normal)
+            button.imageView?.contentMode = .scaleAspectFill
             button.addTarget(self, action: #selector(didTapOnPhotoButton(sender:)), for: .touchUpInside)
             stackView.addArrangedSubview(button)
         }
@@ -50,42 +65,35 @@ class ViewController: UIViewController {
     
     
     @IBAction func didSwipeOnMainView(_ sender: UISwipeGestureRecognizer) {
-     
-        //let image = UIImage(named: "test-image")
         let image = gridView.asImage()
         let items = [image]
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(ac, animated: true)
-        
-        
-//        let activityController = UIActivityViewController (activityItems: [gridView!], applicationActivities: [])
-//
-//        self.present ( activityController , animated : true , completion: nil )
-        
-        
-//        if let image = gridView {
-//            let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
-//             present(vc, animated: true, completion: nil)
-//        }
-        
-        
-//        let activityController = UIActivityViewController()
-//        present(activityController, animated: true, completion: {
-//            
-//        })
     }
     
-    @IBAction func didTapFirstButton() {
+    func resetLayoutButtonsSelectedImage() {
+        for layoutButton in layoutButtons {
+            layoutButton.setImage(nil, for: .normal)
+        }
+    }
+    
+    @IBAction func didTapFirstButton(sender: UIButton) {
+        resetLayoutButtonsSelectedImage()
+        sender.setImage(UIImage(named: "Selected"), for: .normal)
         gridView.isHidden = false
         createViewsAccordingTo(layout: .OneTopTwoBottom)
     }
     
-    @IBAction func didTapSecondButton() {
+    @IBAction func didTapSecondButton(sender: UIButton) {
+        resetLayoutButtonsSelectedImage()
+        sender.setImage(UIImage(named: "Selected"), for: .normal)
         gridView.isHidden = false
         createViewsAccordingTo(layout: .TwoTopOneBottom)
     }
     
-    @IBAction func didTapThirdButton() {
+    @IBAction func didTapThirdButton(sender: UIButton) {
+        resetLayoutButtonsSelectedImage()
+        sender.setImage(UIImage(named: "Selected"), for: .normal)
         gridView.isHidden = false
         createViewsAccordingTo(layout: .TwoTopTwoBottom)
     }

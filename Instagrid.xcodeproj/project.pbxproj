@@ -13,6 +13,8 @@
 		F3812E2823A96E1A00A15BCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3812E2623A96E1A00A15BCF /* Main.storyboard */; };
 		F3812E2A23A96E1B00A15BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3812E2923A96E1B00A15BCF /* Assets.xcassets */; };
 		F3812E2D23A96E1B00A15BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3812E2B23A96E1B00A15BCF /* LaunchScreen.storyboard */; };
+		F3D019D223C519F900E39CC1 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F3DCF94E23ABD7AA00EF48AD /* ThirstySoftRegular.otf */; };
+		F3D019D323C519FC00E39CC1 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F3DCF94F23ABD7AC00EF48AD /* Delm-Medium.otf */; };
 		F3DCF95223ABD8E600EF48AD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3DCF95123ABD8E600EF48AD /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +168,8 @@
 			files = (
 				F3812E2D23A96E1B00A15BCF /* LaunchScreen.storyboard in Resources */,
 				F3DCF95223ABD8E600EF48AD /* Default-568h@2x.png in Resources */,
+				F3D019D323C519FC00E39CC1 /* Delm-Medium.otf in Resources */,
+				F3D019D223C519F900E39CC1 /* ThirstySoftRegular.otf in Resources */,
 				F3812E2A23A96E1B00A15BCF /* Assets.xcassets in Resources */,
 				F3812E2823A96E1A00A15BCF /* Main.storyboard in Resources */,
 			);
