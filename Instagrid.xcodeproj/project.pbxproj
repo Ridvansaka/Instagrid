@@ -18,7 +18,6 @@
 		F3D019D223C519F900E39CC1 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F3DCF94E23ABD7AA00EF48AD /* ThirstySoftRegular.otf */; };
 		F3D019D323C519FC00E39CC1 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F3DCF94F23ABD7AC00EF48AD /* Delm-Medium.otf */; };
 		F3D86FF023D63783000FFF18 /* UIView+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D86FEF23D63783000FFF18 /* UIView+Render.swift */; };
-		F3DCF95223ABD8E600EF48AD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3DCF95123ABD8E600EF48AD /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		F3D86FEF23D63783000FFF18 /* UIView+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Render.swift"; sourceTree = "<group>"; };
 		F3DCF94E23ABD7AA00EF48AD /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		F3DCF94F23ABD7AC00EF48AD /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
-		F3DCF95123ABD8E600EF48AD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,10 +47,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F307E30923D65045004A5108 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3812E2923A96E1B00A15BCF /* Assets.xcassets */,
+				F307E30A23D65050004A5108 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F307E30A23D65050004A5108 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F3DCF94E23ABD7AA00EF48AD /* ThirstySoftRegular.otf */,
+				F3DCF94F23ABD7AC00EF48AD /* Delm-Medium.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F307E30B23D65071004A5108 /* MainDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				F3812E2223A96E1A00A15BCF /* AppDelegate.swift */,
+			);
+			path = MainDelegates;
+			sourceTree = "<group>";
+		};
+		F307E30C23D650A3004A5108 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F307E30D23D650B3004A5108 /* PhotoLayout */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F307E30D23D650B3004A5108 /* PhotoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F3DCF94B23ABD71E00EF48AD /* View */,
+				F3DCF94C23ABD72E00EF48AD /* Controller */,
+				F3DCF94A23ABD71100EF48AD /* Model */,
+			);
+			path = PhotoLayout;
+			sourceTree = "<group>";
+		};
 		F3812E1623A96E1900A15BCF = {
 			isa = PBXGroup;
 			children = (
-				F3DCF95123ABD8E600EF48AD /* Default-568h@2x.png */,
 				F3812E2123A96E1A00A15BCF /* Instagrid */,
 				F3812E2023A96E1A00A15BCF /* Products */,
 			);
@@ -69,10 +110,10 @@
 		F3812E2123A96E1A00A15BCF /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				F3DCF94D23ABD73B00EF48AD /* Supporting files */,
-				F3DCF94A23ABD71100EF48AD /* Model */,
-				F3DCF94B23ABD71E00EF48AD /* View */,
-				F3DCF94C23ABD72E00EF48AD /* Controller */,
+				F371308223AD4DB200420E3E /* Info.plist */,
+				F307E30C23D650A3004A5108 /* Screens */,
+				F307E30B23D65071004A5108 /* MainDelegates */,
+				F307E30923D65045004A5108 /* Resources */,
 			);
 			path = Instagrid;
 			sourceTree = "<group>";
@@ -103,18 +144,6 @@
 				F3D86FEF23D63783000FFF18 /* UIView+Render.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		F3DCF94D23ABD73B00EF48AD /* Supporting files */ = {
-			isa = PBXGroup;
-			children = (
-				F371308223AD4DB200420E3E /* Info.plist */,
-				F3812E2223A96E1A00A15BCF /* AppDelegate.swift */,
-				F3DCF94E23ABD7AA00EF48AD /* ThirstySoftRegular.otf */,
-				F3DCF94F23ABD7AC00EF48AD /* Delm-Medium.otf */,
-				F3812E2923A96E1B00A15BCF /* Assets.xcassets */,
-			);
-			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +205,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3812E2D23A96E1B00A15BCF /* LaunchScreen.storyboard in Resources */,
-				F3DCF95223ABD8E600EF48AD /* Default-568h@2x.png in Resources */,
 				F3D019D323C519FC00E39CC1 /* Delm-Medium.otf in Resources */,
 				F3D019D223C519F900E39CC1 /* ThirstySoftRegular.otf in Resources */,
 				F3812E2A23A96E1B00A15BCF /* Assets.xcassets in Resources */,
@@ -344,7 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJK3B3ZHVC;
-				INFOPLIST_FILE = "Instagrid/Supporting files/Info.plist";
+				INFOPLIST_FILE = Instagrid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -363,7 +391,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJK3B3ZHVC;
-				INFOPLIST_FILE = "Instagrid/Supporting files/Info.plist";
+				INFOPLIST_FILE = Instagrid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
