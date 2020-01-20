@@ -7,7 +7,7 @@
 //
 
 import Foundation
-enum Layout {
+enum Layout: CaseIterable {
     case OneTopTwoBottom, TwoTopOneBottom, TwoTopTwoBottom
     
     func getTopNumber() -> Int {

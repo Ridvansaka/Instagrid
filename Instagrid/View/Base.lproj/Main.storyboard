@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Photo Layout View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PhotoLayoutViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,27 +70,27 @@
                                         </constraints>
                                         <state key="normal" image="Selected" backgroundImage="Layout 1"/>
                                         <connections>
-                                            <action selector="didTapFirstButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="af6-Dp-VAF"/>
+                                            <action selector="didTapLayoutButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihk-KX-qgG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sps-Rb-qW7">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sps-Rb-qW7">
                                         <rect key="frame" x="130.66666666666666" y="0.0" width="112.66666666666666" height="112.66666666666667"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Sps-Rb-qW7" secondAttribute="height" multiplier="1:1" id="9bW-qg-fKq"/>
                                         </constraints>
                                         <state key="normal" image="Selected" backgroundImage="Layout 2"/>
                                         <connections>
-                                            <action selector="didTapSecondButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="juM-Xv-eRi"/>
+                                            <action selector="didTapLayoutButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n7O-jU-ZNh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBx-uR-3Vw">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBx-uR-3Vw">
                                         <rect key="frame" x="261.33333333333331" y="0.0" width="112.66666666666669" height="112.66666666666667"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="RBx-uR-3Vw" secondAttribute="height" multiplier="1:1" id="zUN-Lo-lYJ"/>
                                         </constraints>
                                         <state key="normal" image="Selected" backgroundImage="Layout 3"/>
                                         <connections>
-                                            <action selector="didTapThirdButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ify-yx-wK8"/>
+                                            <action selector="didTapLayoutButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DED-Rb-hGm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -232,6 +232,7 @@
                         <outlet property="bottomStackView" destination="xes-7b-hgx" id="07Q-OF-VgL"/>
                         <outlet property="gridView" destination="eEJ-rg-UtH" id="BOD-4s-Dmn"/>
                         <outlet property="shareArrowImageView" destination="AoJ-HL-uAR" id="ozY-tf-6Jd"/>
+                        <outlet property="shareSwipeGestureRecognizer" destination="a1b-OD-O29" id="Gnj-7Z-xAp"/>
                         <outlet property="swipeUpLabel" destination="etS-1y-Bo1" id="5gN-y3-KAS"/>
                         <outlet property="topStackView" destination="U1x-wc-R9L" id="NLb-vN-pmI"/>
                         <outletCollection property="layoutButtons" destination="APh-mV-Mmu" collectionClass="NSMutableArray" id="x2T-ps-bv8"/>
